@@ -1,0 +1,40 @@
+#oc{
+    margin-top: 6em;
+}
+.blk{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    display: inline-flex;
+    margin: 1rem;
+    flex-direction: column;
+    
+}
+.ffields{
+    margin-top: 0.5rem;
+    font-size: large;
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    border: 0;
+    transition: all ease 100ms;
+}
+.ffields:focus{
+    outline: 0.15rem solid #07be28;
+}
+#limg{
+    margin: 0.5rem;
+    width: 5rem;
+}
+#tn{
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to bottom left,#b305b6,#3d04af);;
+    display: inline-flex;
+    color: aliceblue;
+    font-size: large;
+}
+#info{
+    color: aqua;
+    font-size: large;
+    margin: 1rem;
+}

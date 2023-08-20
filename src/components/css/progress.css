@@ -1,0 +1,17 @@
+#marks{
+    width: 10rem;
+    height: 1.5rem;
+    background-color: rgb(167, 152, 255);
+    border-radius: 5rem;
+    overflow: hidden;
+}
+#obtained{
+    width: 0;
+    height: 1.5rem;
+    border-radius: 5rem;
+    background-image: linear-gradient(to bottom right,#b305b6,#3d04af);
+    animation: marks 1s ;
+}
+#chip{
+    display: inline-flex;
+}

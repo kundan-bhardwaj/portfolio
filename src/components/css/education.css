@@ -1,0 +1,26 @@
+#edc{
+    margin-top: 6rem;
+    padding: 1rem;
+    width: fit-content;
+    background-color: rgb(8, 8, 50);
+    border-radius: 1rem;
+}
+#ed{  
+    padding: 0.5rem;
+    color: aliceblue;
+}
+#contents{
+    background-color: rgba(16, 19, 75, 0.564);
+    padding: 0.5rem;
+    color: rgb(194, 203, 255);
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+
+#upper{
+    display: flex;
+}
+#cc{
+    display: flex;
+    gap: 1rem;
+}

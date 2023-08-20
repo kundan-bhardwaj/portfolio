@@ -1,0 +1,154 @@
+#landing{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+#title{
+    text-shadow: 0.5rem 0.5rem 3rem rgba(205, 208, 255, 0.511);
+}
+#text{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: aliceblue;
+    font-size: 1.5vmax;
+}
+#quote{
+    margin: 2.5rem;
+    padding: 1rem;
+    background-image: linear-gradient(to top left,rgb(51, 255, 0),rgb(242, 255, 0));
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1rem;
+    color: #07122b;
+    transition: all ease 0.3s;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+#quote:hover{
+    scale: 1.1;
+    box-shadow: 0.5rem 0.5rem 3rem 0.1rem rgb(157, 255, 0);
+}
+#quote:active{
+    scale: 0.9;
+}
+
+#image{
+    margin: 0.5em;
+}
+#avtar{
+    
+}
+
+#title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* offers */
+
+#cards{
+    display: flex;
+    background-color: #07122b;
+    border: 0.1rem solid rgb(21, 3, 42);
+    border-radius: 0.5rem;
+    margin: 1em;
+    padding: 0.5em;
+    color: aliceblue;
+}
+
+
+
+/* info cards */
+
+#profession{
+    border: 0.1rem solid #00f7ff24;
+    border-radius: 1rem;
+    margin-top: 2em;
+    background-color: rgba(96, 96, 207, 0.219);
+    box-shadow: 0.8em 0.9em 3em 0.1em rgba(70, 85, 255, 0.21);
+    position: relative;
+}
+/* title for skills */
+#prtitle{
+    display: flex;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    color: aliceblue;
+    background-image: linear-gradient(to top left,rgb(0, 30, 255),rgb(204, 0, 255));
+    font-size: 1vmax;
+    align-items: center;
+}
+#imgpr{
+    width: 10vmax;
+}
+#btnc{
+    display: flex;
+}
+
+#shortinfo{
+    display: flex;
+    flex-direction: column;
+}
+#moreinfo{
+    width: fit-content;
+    margin-left: 2em;
+    font-size: x-small;
+}
+#simg{
+    width: 18rem;
+}
+#inline{
+    display: inline-flex;
+    margin: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-radius: 1em;
+    color: #00f7ff;
+    background-color: #0095ff27;
+    cursor: pointer;
+    align-items: center;
+}
+#con{
+    width: 2vmax;
+}
+
+@media only screen and (max-width:600px){
+    #content{
+        flex-direction: column-reverse;
+    }
+    #moreinfo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #avtar{
+        width: 25rem;
+    }
+}
+
+@keyframes move1 {
+    0%{
+        margin-top: 2em;
+        margin-left: 1em;
+    }
+    50%{
+        margin-top: 3em;
+        margin-left: 2em;
+    }
+    100%{
+        margin-top: 2em;
+        margin-left: 1em;
+    }
+    
+}

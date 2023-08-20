@@ -1,0 +1,46 @@
+#authc{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#lgc{
+    display: block;
+    padding: 0.2rem;
+    border-radius: 1rem;
+    max-width: 40rem;
+    color: aliceblue;
+    border: 0.1rem solid rgb(255, 255, 255);
+}
+#dismiss{
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem;
+    background-color: #9a7fea4a;
+    border: 0.15rem solid #03001C;
+    border-radius: 0.5rem;
+    width: fit-content;
+
+}
+a{
+    color: aqua;
+    cursor: pointer;
+}
+a:hover{
+    color: greenyellow;
+}
+.err{
+    font-size: smaller;
+    background-color: rgba(255, 0, 0, 0.258);
+    color: red;
+    margin-top: 0.2rem;
+    border-radius: 0.4rem;
+}
+.hlogo{
+    height: 4rem;
+}
+.hc{
+    display: inline-flex;
+    margin: 1rem;
+    align-items: center;
+}

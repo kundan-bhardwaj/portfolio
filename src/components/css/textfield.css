@@ -1,0 +1,15 @@
+.blk{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    display: inline-flex;
+    margin: 1rem;
+    flex-direction: column;
+    
+}
+.ffields{
+    margin-top: 0.5rem;
+    font-size: medium;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
+    border: 0;
+}

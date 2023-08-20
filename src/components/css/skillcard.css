@@ -1,0 +1,28 @@
+#inner{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+}
+#title{
+    display: inline-flex;
+    margin: 1em;
+}
+#skillcard{
+    color: aliceblue;
+    background-color: #07122b;
+    border: 0.1rem solid rgb(21, 3, 42);
+    border-radius: 0.5rem;
+    padding: 0.5em;
+    font-size: small;
+}
+#skillimg{
+    grid-column: 1;
+}
+#skillname{
+    grid-column: 2;
+}
+#other{
+    display: flex;
+    flex-direction: column;
+}

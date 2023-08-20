@@ -1,0 +1,40 @@
+#projc{
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-color: #07122b;
+    border: 0.1rem solid rgb(21, 3, 42);
+    color: aliceblue;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+}
+#pimg{
+    width: 30rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+#plink{
+    background-image: linear-gradient(to bottom left,#b305b6,#3d04af);
+    padding: 0.5rem;
+    width: fit-content;
+    border-radius: 0.3em;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+#ptech{
+    display: inline-flex;
+    gap: 0.5em;
+    margin: 0.5em;
+
+}
+#projscroll{
+    display: flex;
+    overflow-x: scroll;
+}
+
+@media only screen and (max-width: 490px) {
+    #pimg{
+        width: 18rem;
+    }
+}
