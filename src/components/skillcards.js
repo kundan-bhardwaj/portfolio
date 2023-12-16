@@ -35,7 +35,7 @@ export default function Skillcards() {
                 ele.push(
                     <div id='title'>
                         <img id='skillimg' width='60em' src={'http://127.0.0.1:8000' + tech[i].tlogo} alt={tech[i].title} />
-                        <h2>&nbsp;{tech[i].title}</h2>
+                        <h2 id='skillname'>&nbsp;{tech[i].title}</h2>
                     </div>
                 )
             }

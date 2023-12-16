@@ -1,12 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import './css/auth.css'
 import api from '../tools/server'
 import Textfield from './textfield'
 import Button from './button'
 import { ToastContainer,toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import packContext from '../context/create'
 
 export default function Auth(props) {
+
+    //jwt tokens
+    let tokens = useContext(packContext)
 
     //signup form
     const [firstname, setFirstname] = useState(null)
@@ -16,8 +20,8 @@ export default function Auth(props) {
     const [password2, setPas2] = useState(null)
 
     //axios create user
-    function submitreg(event) {
-        api.post(
+    async function submitreg(event) {
+        await api.post(
             '/register/',
             {
                 'firstname': firstname,
@@ -26,12 +30,13 @@ export default function Auth(props) {
                 'password': password1
             }
         )
-            .then((response) => {
+        .then((response) => {
                 toast.success(response.data.message)
             })
-            .catch((error) => {
+        .catch((error) => {
                 toast.error(error)
             })
+        tokens?.handleTokens(firstname,password1)
         event.preventDefault()
     }
 
@@ -42,8 +47,8 @@ export default function Auth(props) {
     const [password, setPass] = useState(null)
 
     // axios login
-    function submitlog(event) {
-        api.post(
+    async function submitlog(event) {
+        await api.post(
             '/login/',
             {
                 'ID': id,

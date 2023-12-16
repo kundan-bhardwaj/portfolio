@@ -3,7 +3,7 @@ import './css/projects.css'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import Button from './button'
-import {GoLinkExternal} from 'react-icons/go'
+import { GoLinkExternal } from 'react-icons/go'
 
 export default function Projects() {
     const [pack, setPack] = useState(null)
@@ -51,12 +51,14 @@ export default function Projects() {
             ele.push(
                 <div id='projc'>
                     <img id='pimg' src={'http://127.0.0.1:8000' + pack[i].pimg} alt="" />
-                    <h2 id='ptitle'>{pack[i].title}</h2>
-                    <div id='ptech'>
-                        {techs(i)}
+                    <div id='projectd'>
+                        <h2 id='ptitle'>{pack[i].title}</h2>
+                        <div id='ptech'>
+                            {techs(i)}
+                        </div>
+                        <Button target='/' to={pack[i].link} color='white' text='Visit Live' icon={<GoLinkExternal />} />
+                        <p id='pdesc'>{pack[i].discription}</p>
                     </div>
-                    <Button target = '/' to = {pack[i].link} color = 'white' text = 'Visit Live' icon = {<GoLinkExternal/>}/>
-                    <p id='pdesc'>{pack[i].discription}</p>
                 </div>
             )
         }
@@ -67,7 +69,7 @@ export default function Projects() {
     return (
         <>
             <div id='projscroll'>
-            {create()}
+                {create()}
             </div>
         </>
     )

@@ -1,0 +1,16 @@
+#scont{
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.simgs{
+    margin: 1rem;
+    width: 6rem;
+    border-radius: 1rem;
+    transition: 0.2s;
+}
+.simgs:hover{
+   scale: 1.1;
+}

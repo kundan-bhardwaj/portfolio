@@ -10,9 +10,8 @@
 }
 #skillcard{
     color: aliceblue;
-    background-color: #07122b;
-    border: 0.1rem solid rgb(21, 3, 42);
-    border-radius: 0.5rem;
+    background-color: #01101a;
+    border-radius: 1.5rem;
     padding: 0.5em;
     font-size: small;
 }
@@ -21,6 +20,9 @@
 }
 #skillname{
     grid-column: 2;
+    margin-left: 1rem;
+    text-shadow: none;
+    color: aliceblue;
 }
 #other{
     display: flex;

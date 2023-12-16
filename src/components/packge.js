@@ -45,35 +45,29 @@ export default function Packge() {
             if (num == slips[i]?.package_no) {
                 if (slips[i].isOption === false) {
                     ele.push(
-                        <>
-                            <div id='moreinfo'>
-                                <div id='inline'>
-                                    <h2>{slips[i].text}&nbsp;</h2>
-                                    <img height='30em' src={'http://127.0.0.1:8000' + slips[i].images} alt="" />
-                                </div>
+                            <div id='inline'>
+                                <label htmlFor="">{slips[i].text}&nbsp;</label>
+                                <img height='20em' src={'http://127.0.0.1:8000' + slips[i].images} alt="" />
                             </div>
-                        </>
                     )
                 }
                 else {
                     if (slips[i].available === true) {
                         ele.push(
-                            <div id='moreinfo'>
-                                <div id='inline'>
-                                    <h2>{slips[i].text} &nbsp;</h2>
-                                    <img width='25vmax' src={require('./images/true.png')} alt="" />
-                                </div>
+
+                            <div id='inline'>
+                                <label htmlFor="">{slips[i].text} &nbsp;</label>
+                                <img width='18vmax' src={require('./images/true.png')} alt="" />
                             </div>
                         )
                     }
                     else {
                         ele.push(
-                            <div id='moreinfo'>
-                                <div id='inline'>
-                                    <h2>{slips[i].text} &nbsp;</h2>
-                                    <img width='25vmax' src={require('./images/false.png')} alt="" />
-                                </div>
+                            <div id='inline'>
+                                <label htmlFor="">{slips[i].text} &nbsp;</label>
+                                <img width='18vmax' src={require('./images/false.png')} alt="" />
                             </div>
+
                         )
                     }
                 }
@@ -90,18 +84,20 @@ export default function Packge() {
                         <img src={'http://127.0.0.1:8000' + packages[i].banner} id='simg' alt="" />
                         <h2>{packages[i].title}</h2>
                         <h2></h2>
+                        <div id='slipcont'>
+                        {createslips(slips, packages[i]?.package_no)}
+                        </div>
                         <div id='btnc'>
-                            <Link style={{'textDecoration':'none'}} to='/order' onClick={() => {oredr.change('http://127.0.0.1:8000' + packages[i].banner, packages[i].title, 10, packages[i].id)}}><Button icon = {<BsCartFill />}  text = {'order now'} color = 'yellow'/></Link>
+                            <Link style={{ 'textDecoration': 'none' }} to='/order' onClick={() => { oredr.change('http://127.0.0.1:8000' + packages[i].banner, packages[i].title, 10, packages[i].id) }}><Button icon={<BsCartFill />} text={'order now'} color='yellow' /></Link>
                         </div>
                     </div>
-                    {createslips(slips, packages[i]?.package_no)}
                 </div>
             )
         }
         return (ele)
     }
     return (
-        <div>
+        <div id='packagecont'>
             {createpackage(packages)}
         </div>
     )

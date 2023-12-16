@@ -5,6 +5,7 @@ import Textfield from './textfield'
 import api from '../tools/server'
 import axios from 'axios'
 import Button from './button'
+import { toast } from 'react-toastify'
 
 
 export default function Order(props) {
@@ -18,8 +19,9 @@ export default function Order(props) {
     const [audience,setAudience] = useState(null)
 
     // sendig data
-
+    const access = useContext(packContext)
     function createOrder() {
+
         api.post(
             '/placeorder/',
             {
@@ -30,11 +32,13 @@ export default function Order(props) {
                 'audience': audience   
             },
             {
-                withCredentials: true
+                headers: {
+                    Authorization: `Bearer ${(JSON.parse(localStorage.getItem('authtokens'))).access}`
+                }
             }
             
         ).catch((error) => {
-            alert(error.message)
+            toast.error(error.message)
         })
     }
 

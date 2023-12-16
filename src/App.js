@@ -1,6 +1,5 @@
 import './App.css';
 import { ToastContainer } from 'react-toastify';
-import Header from './components/Header';
 import Landing from './components/landing';
 import Resume from './components/resume';
 import Services from './components/services';
@@ -22,7 +21,6 @@ function App() {
     <div className="App">
       <div id='main'>
         <PackState>
-          <Header />
           <BrowserRouter>
             <Routes>
               <Route index element={<Landing />}>

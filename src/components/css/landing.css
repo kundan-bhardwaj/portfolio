@@ -9,8 +9,34 @@
     padding: 1rem;
 }
 #title{
-    text-shadow: 0.5rem 0.5rem 3rem rgba(205, 208, 255, 0.511);
+    color: rgba(255, 255, 255, 0.958);
+    text-shadow: 0.4rem 0.5rem 1rem #00f2ff,#000dff;
 }
+#intext{
+    padding: 1.5rem;
+    max-width: 60rem;
+}
+#hello{
+    padding: 0%;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    color: rgb(0, 187, 255);
+}
+.owl{
+    position: absolute;
+    z-index: -1;
+    
+}
+/* #owl1{
+    background-color: #002fff7f;
+    padding: 6rem;
+    position: absolute;
+    border-top-right-radius: 2rem 6rem;
+    border-bottom-right-radius: 3rem 4rem;
+    border-top-left-radius: 7rem 4rem;
+    border-bottom-left-radius: 8rem;
+} */
+
 #text{
     display: flex;
     flex-wrap: wrap;
@@ -18,14 +44,27 @@
     color: aliceblue;
     font-size: 1.5vmax;
 }
+
+#owl3{
+    height: fit-content;
+    padding: 5rem;
+    justify-self: flex-end;
+    margin-left: auto;
+    background-size: 2rem 2rem;
+    background-image: radial-gradient(
+        circle ,
+        #5F7791  3px,
+        transparent 0
+      );
+}
 #quote{
     margin: 2.5rem;
     padding: 1rem;
-    background-image: linear-gradient(to top left,rgb(51, 255, 0),rgb(242, 255, 0));
+    background-image: linear-gradient(to top left,#00f2ff,#000dff);
     width: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     border-radius: 1rem;
-    color: #07122b;
+    color: #ffffff;
     transition: all ease 0.3s;
     font-size: large;
     font-weight: bold;
@@ -33,7 +72,7 @@
 }
 #quote:hover{
     scale: 1.1;
-    box-shadow: 0.5rem 0.5rem 3rem 0.1rem rgb(157, 255, 0);
+    box-shadow: 0.5rem 0.5rem 3rem 0.1rem #6ff3ff;
 }
 #quote:active{
     scale: 0.9;
@@ -55,12 +94,11 @@
 /* offers */
 
 #cards{
-    display: flex;
-    background-color: #07122b;
+    background-color:#01101a;
     border: 0.1rem solid rgb(21, 3, 42);
     border-radius: 0.5rem;
     margin: 1em;
-    padding: 0.5em;
+    padding: 1em;
     color: aliceblue;
 }
 
@@ -69,25 +107,25 @@
 /* info cards */
 
 #profession{
-    border: 0.1rem solid #00f7ff24;
+    /* border: 0.1rem solid #00f7ff24;
     border-radius: 1rem;
     margin-top: 2em;
     background-color: rgba(96, 96, 207, 0.219);
     box-shadow: 0.8em 0.9em 3em 0.1em rgba(70, 85, 255, 0.21);
-    position: relative;
+    position: relative; */
 }
 /* title for skills */
 #prtitle{
     display: flex;
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
     color: aliceblue;
-    background-image: linear-gradient(to top left,rgb(0, 30, 255),rgb(204, 0, 255));
     font-size: 1vmax;
     align-items: center;
 }
+#textpr{
+    text-align: center;
+}
 #imgpr{
-    width: 10vmax;
+    width: 20vmax;
 }
 #btnc{
     display: flex;
@@ -98,28 +136,35 @@
     flex-direction: column;
 }
 #moreinfo{
-    width: fit-content;
-    margin-left: 2em;
+    display: flex;
+    flex-wrap: wrap;
     font-size: x-small;
 }
 #simg{
-    width: 18rem;
+    width: 30rem;
 }
 #inline{
     display: inline-flex;
-    margin: 0.5em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-radius: 1em;
-    color: #00f7ff;
-    background-color: #0095ff27;
+    padding: 0.5rem;
+    width: fit-content;
+    font-weight: bold;
+    margin: 0.3rem;
+    border-radius: 0.5em;
+    color: #193f78;
+    background-color: rgba(2, 40, 54, 0.414);
     cursor: pointer;
     align-items: center;
 }
 #con{
     width: 2vmax;
+}
+#packagecont{
+    justify-content: center;
+    display: flex;
+}
+#slipcont{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width:600px){
@@ -134,6 +179,9 @@
 @media only screen and (max-width: 950px) {
     #avtar{
         width: 25rem;
+    }
+    #owl3{
+        display: none;
     }
 }
 

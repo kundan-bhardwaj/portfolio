@@ -4,11 +4,21 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color:#03001C;
+  background-color: #000000;
   
 }
 body > *{
   -webkit-tap-highlight-color: transparent;
+  
+  display: flex;
+  /* background-size: 5rem 5rem;
+  background-image: radial-gradient(
+    circle ,
+    #5F7791  3px,
+    transparent 0
+  ); */
+  
+  background-position: center;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

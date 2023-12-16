@@ -1,0 +1,27 @@
+.bigbtn{
+    padding: 1.5rem;
+    border-radius: 2rem;
+    color: aliceblue;
+    display: flex;
+    gap: 1rem;
+    font-weight: bold;
+    align-items: center;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #01101a;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.bigbtn:hover{
+    scale: 1.05;
+    box-shadow: 0.5rem 0.5rem 3rem 0.1rem #6ff3ff;
+}
+#buttoncont{
+    display: flex;
+    gap: 2em;
+    margin: 3em;
+    justify-content: center;
+}
+.bbimg{
+    width: 3.5rem;
+}
