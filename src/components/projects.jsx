@@ -57,7 +57,7 @@ export default function Projects() {
                             {techs(i)}
                         </div>
                         <Button target='/' to={pack[i].link} color='white' text='Visit Live' icon={<GoLinkExternal />} />
-                        <p id='pdesc'>{pack[i].discription}</p>
+                        <label id='pdesc'>{pack[i].discription}</label>
                     </div>
                 </div>
             )

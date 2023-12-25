@@ -43,11 +43,11 @@
     color: rgb(255, 255, 255);
 }
 #green{
-    color: #1aff00;
+    color: #0e9f10;
     background-color: #09ff0027;
 }
 #green:hover{
-    background-color: #22ff00;
+    background-color: #129c14;
     color: rgb(0, 0, 0);
 }
 #purple{

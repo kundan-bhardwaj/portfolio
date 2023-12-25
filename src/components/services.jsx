@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import './css/services.css'
-import Packge from './packge'
 import { SiPagespeedinsights } from 'react-icons/si'
 import { FaMobile,FaTools } from 'react-icons/fa'
 
@@ -36,7 +35,6 @@ export default function Services() {
                 </div>
             </div>
             <div id='webc' ref={ref1}>
-                <Packge />
             </div>
             <div id='appc' ref={ref2} style={{'color':'white','display': 'none'}}>
                 <h1>coming soon</h1>

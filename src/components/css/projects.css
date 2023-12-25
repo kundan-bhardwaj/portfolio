@@ -1,11 +1,12 @@
 #projc{
+
     margin: 1rem;
     border-radius: 0.5rem;
     background-color: #01101a;
     border: 0.1rem solid rgb(21, 3, 42);
     color: aliceblue;
     display: flex;
-    width: fit-content;
+    width: min-content;
     flex-direction: column;
 }
 #pimg{
@@ -35,8 +36,6 @@
 #projectd{
     padding: 1rem;
 }
-@media only screen and (max-width: 490px) {
-    #pimg{
-        width: 18rem;
-    }
+#pdesc{
+    max-width: fit-content;
 }
