@@ -2,7 +2,8 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kundan-bhardwaj.github.io/portfolio/",
+  "heading": "./",
+  "homepage": "https://kundan-bhardwaj.github.io/portfolio",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
