@@ -6,7 +6,7 @@ import Services from './components/services';
 import Hireme from './components/hireme'
 import Yourorders from './components/yourorders'
 import Footer from './components/footer'
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Offer from './components/offer';
 import Order from './components/order';
 import PackState from './context/contexts';
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <div id='main'>
         <PackState>
-          <HashRouter>
+          <BrowserRouter>
             <Routes>
               <Route index element={<Landing />}>
               </Route>
@@ -46,7 +46,7 @@ function App() {
               <Route path='quote' element = {<Quote />}>
               </Route>
             </Routes>
-          </HashRouter>
+          </BrowserRouter>
           <ToastContainer theme='dark' position='top-right'/>
           <Footer />
         </PackState>
