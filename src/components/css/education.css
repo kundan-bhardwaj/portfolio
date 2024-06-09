@@ -1,13 +1,17 @@
 #edc{
-    margin-top: 6rem;
+    margin: 0.5rem;
     padding: 1rem;
     width: fit-content;
     background-color: rgb(8, 8, 50);
     border-radius: 1rem;
+    max-width: 25rem;
 }
 #ed{  
     padding: 0.5rem;
     color: aliceblue;
+    font-size: x-small;
+    display: flex;
+    align-items: center;
 }
 #contents{
     background-color: rgba(16, 19, 75, 0.564);
@@ -16,11 +20,19 @@
     width: fit-content;
     border-radius: 0.5rem;
 }
-
+#ilogo{
+    width: 6rem;
+    height: auto;
+}
 #upper{
     display: flex;
 }
 #cc{
     display: flex;
-    gap: 1rem;
+    font-size: large;
+    color: aliceblue;
+}
+#eds{
+    display: flex;
+    flex-wrap: wrap;
 }

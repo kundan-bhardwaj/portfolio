@@ -28,3 +28,52 @@
     display: flex;
     flex-direction: column;
 }
+#loading{
+    border-radius: 1.5rem;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    background-color: #01101a;
+}
+#loimg{
+    border-radius: 5rem;
+    padding: 2.5rem;
+    background-color: rgba(2, 40, 54, 0.414);
+    margin: 0.5rem;
+    width: min-content;
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+    animation: load2 0.5s linear infinite;
+    transition: 1s;
+}
+#lostrip{
+    display: inline-flex;
+    padding: 0.8rem;
+    width: 90%;
+    margin: 0.3rem;
+    border-radius: 0.5em;
+    color: #193f78;
+    animation: load1 1s linear infinite;
+    background-color: rgba(2, 40, 54, 0.414);
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+}
+#skeleton{
+    display: flex;
+    gap: 1rem;
+}
+@keyframes load1 {
+    0%{
+        background-position: -10rem;
+    }
+    100%{
+        background-position: 10rem;
+    }
+}
+@keyframes load2 {
+    0%{
+        background-position: -2.5rem;
+    }
+    100%{
+        background-position: 2.5rem;
+    }
+}

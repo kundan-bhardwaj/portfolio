@@ -94,7 +94,7 @@ export default function Auth(props) {
                     <h1>&nbsp;&nbsp;Log In</h1>
                 </div>
                 <div>
-                    <Textfield text1='Email Id' text2='email id' type='email' oc={(e) => { setId(e.target.value) }} />
+                    <Textfield ml = {30} text1='Email Id' text2='email id' type='email' oc={(e) => { setId(e.target.value) }} />
                     <Textfield text1='Password' text2='password' type='password' oc={(e) => { setPass(e.target.value) }} />
                 </div>&nbsp;&nbsp;
                 <a onClick={() => { open(2) }}>Don't have an account? Register.</a>
@@ -109,7 +109,7 @@ export default function Auth(props) {
                 <div>
                     <Textfield text1='first name' text2='first name' type='text' oc={(e) => { setFirstname(e.target.value) }} />
                     <Textfield text1='last name' text2='last name' type='text' oc={(e) => { setLastname(e.target.value) }} />
-                    <Textfield text1='Email Id' text2='email id' type='text' oc={(e) => { setEmail(e.target.value) }} />
+                    <Textfield ml = {30} text1='Email Id' text2='email id' type='text' oc={(e) => { setEmail(e.target.value) }} />
                     <Textfield text1='password' text2='password' type='password' oc={(e) => { setPas1(e.target.value) }} />
                     <Textfield text1='confirm password' text2='confirm password' type='password' oc={(e) => { setPas2(e.target.value) }} />
                 </div>&nbsp;&nbsp;

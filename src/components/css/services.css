@@ -1,23 +1,92 @@
-#this{
+#desc {
+    padding: 1rem;
+}
+
+#services {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-    width: 100%;
+    color: aliceblue;
+    padding: 1rem;
 }
-#li{
+
+#webdev {
     display: flex;
 }
-.service{
-    display: flex; 
-    color: aliceblue;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
+#webdevimg {
+    width: 40rem;
+    justify-self: flex-end;
+    margin: 2rem;
+    margin-left: auto;
+    border-radius: 2rem;
+
+}
+
+#keyfeature {
+    display: flex;
+    align-items: center;
     border-radius: 1rem;
-    cursor: pointer;
-    margin: 1rem;
-    background-color: #9a7fea4a;
-    font-size: 2.5vmin;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: fit-content;
+    background-color: rgba(0, 166, 255, 0.189);
 }
-.service:active{
-    background-image : linear-gradient(to bottom left,#b305b6,#3d04af);
+
+#fimg {
+    width: 6rem;
 }
+
+#ftxt {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#ftxthead {
+    font-weight: bold;
+    font-size: large;
+}
+
+#servicebuttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #webdev {
+        flex-direction: column-reverse;
+    }
+}
+
+#sloading {
+    display: flex;
+    width: 100rem;
+    gap: 10rem;
+}
+
+#sloimg {
+    justify-self: flex-end;
+    margin-right: auto;
+    width: 30rem;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    background-color: rgba(2, 40, 54, 0.414);
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+    margin: 0.5rem;
+    animation: load1 0.5s linear infinite;
+    transition: 1s;
+}
+
+#loblock {
+    display: flex;
+    padding: 3rem;
+    width: 90%;
+    margin: 0.3rem;
+    border-radius: 0.5em;
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+    color: #193f78;
+    animation: load1 1s linear infinite;
+    background-color: rgba(2, 40, 54, 0.414);
+}
+

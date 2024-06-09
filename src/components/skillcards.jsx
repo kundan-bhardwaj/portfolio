@@ -1,28 +1,30 @@
 import axios from 'axios'
-import React, { useRef, useState } from 'react'
+import api from '../tools/server'
+import React, { useContext, useRef, useState } from 'react'
 import { useEffect } from 'react'
 import './css/skillcard.css'
 import { FaExternalLinkSquareAlt } from 'react-icons/fa'
-import { ImCross } from 'react-icons/im'
 import { motion } from 'framer-motion'
-import Progress from './progress'
+import packContext from '../context/create'
+
 export default function Skillcards() {
     // fetch data 
     const [sk, setsk] = useState(null)
     const [tech, setTech] = useState(null)
-    function getData() {
-        axios({
-            method: 'GET',
-            url: 'http://127.0.0.1:8000/skills/',
-        }).then((response) => {
-            setsk(response.data)
-        })
-        axios({
-            method: 'GET',
-            url: 'http://127.0.0.1:8000/tech/',
-        }).then((response) => {
-            setTech(response.data)
-        })
+    const con = useContext(packContext)
+    async function getData() {
+        await api.get(
+            '/skills/',
+        )
+            .then((response) => {
+                setsk(response.data)
+            })
+        await api.get(
+            '/tech/',
+        )
+            .then((response) => {
+                setTech(response.data)
+            })
     }
     useEffect(() => {
         getData()
@@ -34,7 +36,7 @@ export default function Skillcards() {
             if (tech[i].id === sk[j].tech) {
                 ele.push(
                     <div id='title'>
-                        <img id='skillimg' width='60em' src={'http://127.0.0.1:8000' + tech[i].tlogo} alt={tech[i].title} />
+                        <img id='skillimg' width='60em' src={con.link + tech[i].tlogo} alt={tech[i].title} />
                         <h2 id='skillname'>&nbsp;{tech[i].title}</h2>
                     </div>
                 )
@@ -42,16 +44,8 @@ export default function Skillcards() {
         }
         return (ele)
     }
+    const ref = useRef(null)
 
-
-    // dialog
-    
-    function handleClose(id) {
-        document.getElementById(id).style.display = 'none'
-    }
-    function open(id) {
-        document.getElementById(id).style.display = 'flex'
-    }
     // creating skillcards
     function createcards() {
         let ele = []
@@ -60,11 +54,13 @@ export default function Skillcards() {
                 let el = []
                 if (sk[i].certification !== '') {
                     el.push(
-                        <div id='inline' onClick={() => {open(sk[i]?.certification)}}>
-                            <img width='30rem' src={'http://127.0.0.1:8000' + sk[i].cerlogo} alt="" />
-                            &nbsp;certification from&nbsp;{sk[i].certification}&nbsp;
-                            <FaExternalLinkSquareAlt />
-                        </div>
+                        <a target='/' href={con.link + sk[i].cerimg}>
+                            <div id='inline'>
+                                <img width='30rem' src={con.link + sk[i].cerlogo} alt="" />
+                                &nbsp;{sk[i].certification}&nbsp;
+                                <FaExternalLinkSquareAlt />
+                            </div>
+                        </a>
                     )
                 }
                 if (sk[i].experience !== '') {
@@ -79,13 +75,9 @@ export default function Skillcards() {
                 }
                 return (el)
             }
-            let src = 'http://127.0.0.1:8000' + sk[i].cerlogo
+
             ele.push(
                 <>
-                    <dialog id={sk[i].certification} className='dlg' style={{ 'display': 'none' }}>
-                        <div id='dismiss' onClick={() => {handleClose(sk[i]?.certification)}}><ImCross /></div>
-                        <img width='1000rem' src={src} alt={src} />
-                    </dialog>
                     <motion.div whileHover={{ scale: 1.04 }} onHoverStart={e => { }} onHoverEnd={e => { }} id='skillcard'>
                         {techs(i)}
                         <div id='other'>
@@ -95,7 +87,9 @@ export default function Skillcards() {
                     </motion.div></>
             )
         }
-
+        if (ref.current){
+            ref.current.style.display = 'none'
+        }
         return (ele)
     }
 
@@ -103,6 +97,32 @@ export default function Skillcards() {
     return (
         <div id='inner'>
             {createcards()}
-        </div>
+            <div id='skeleton' ref={ref}>
+                <div id='loading' >
+                    <div id='loimg'>
+
+                    </div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                </div>
+                <div id='loading' >
+                    <div id='loimg'>
+
+                    </div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                </div>
+                <div id='loading' >
+                    <div id='loimg'>
+
+                    </div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                    <div id='lostrip'></div>
+                </div>
+            </div>
+        </div >
     )
 }

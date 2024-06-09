@@ -1,0 +1,5 @@
+#form1{
+    display: flex;
+    max-width: 40rem;
+    flex-wrap: wrap;
+}

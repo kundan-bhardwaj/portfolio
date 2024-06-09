@@ -4,7 +4,7 @@
     display: inline-flex;
     margin: 1rem;
     flex-direction: column;
-    
+     
 }
 .ffields{
     margin-top: 0.5rem;
@@ -12,4 +12,10 @@
     padding: 0.7rem;
     border-radius: 0.6rem;
     border: 0;
+}
+#ta{
+    font-size: medium;
+
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

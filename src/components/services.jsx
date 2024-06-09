@@ -1,43 +1,81 @@
-import React, { useEffect, useRef } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
+import axios from 'axios'
+import api from '../tools/server'
+import { FncyBtn1 } from './button'
 import './css/services.css'
-import { SiPagespeedinsights } from 'react-icons/si'
-import { FaMobile,FaTools } from 'react-icons/fa'
+import packContext from '../context/create'
 
 
 export default function Services() {
-    
-    const ref1 = useRef()
-    const ref2 = useRef()
-    const ref3 = useRef()
-    const ref4 = useRef()
-    function open(to) {
-        if (to === 1) {
-            ref1.current.style.display = 'block'
-            ref2.current.style.display = 'none'
-        }
-        else {
-            ref2.current.style.display = 'block'
-            ref1.current.style.display = 'none'
-        }
+    const [Service, setService] = useState(null)
+    const [Attrs, setAttrs] = useState(null)
+    const con = useContext(packContext)
+    async function getData() {
+        await api.get(
+            '/getservice/',
+        )
+            .then((response) => {
+                setService(response.data.services)
+                setAttrs(response.data.attrs)
+            })
     }
+    useEffect(() => {
+        getData()
+    }, [])
+    const ref = useRef(null)
+    function create() {
+        let ele1 = []
+        let ele2 = []
+        for (var i = 0; i < Service?.length; i++) {
 
+            for (var j = 0; j < Attrs[i]?.length; j++) {
+                ele1.push(
+                    <div id='keyfeature'>
+                        <img loading='lazy' id='fimg' src={con.link + Attrs[i][j].image} alt="" />
+                        <div id='ftxt'>
+                            <label htmlFor="" id='ftxthead'>{Attrs[i][j].title}</label>
+                            <label htmlFor="">{Attrs[i][j].discription}</label>
+                        </div>
+                    </div>
+                )
+            }
+            ele2.push(
+                <div id='webdev'>
+                    <div id='desc'>
+                        <h1>{Service[i].title}</h1>
+                        <div id='servicebuttons'>
+                            {ele1}
+                        </div>
+                        <p>
+                            {Service[i].discription}
+                        </p>
+                        <FncyBtn1 text='Get this service' to='/order' />
+
+                    </div>
+                    <img loading='lazy'  id='webdevimg' src={con.link + Service[i].banner} alt="" />
+                </div>
+            )
+        }
+        if (ref.current){
+            ref.current.style.display = 'none'
+        }
+        return ele2
+    }
     return (
-        <div id='this'>
-            <div id='li'>
-                <div id='web' onClick={() => {open(1)}} className='service'>
-                    <h4><SiPagespeedinsights />&nbsp;web developement</h4>
-                </div>
-                <div id='app' onClick={() => {open(2)}} className='service'>
-                    <h4><FaMobile />&nbsp;app developement</h4>
-                </div>
-                <div id='app' onClick={() => {}} className='service'>
-                    <h4><FaTools />&nbsp;custom services</h4>
-                </div>
+        <div id='services'>
+
+            <div>
+                {create()}
             </div>
-            <div id='webc' ref={ref1}>
-            </div>
-            <div id='appc' ref={ref2} style={{'color':'white','display': 'none'}}>
-                <h1>coming soon</h1>
+            <div id='sloading' ref={ref}>
+                
+                <div id='lobc'>
+                    <div id='loblock'></div>
+                    <div id='loblock'></div>
+                    <div id='loblock'></div>
+                    <div id='loblock'></div>
+                </div>
+                <div id='sloimg'></div>
             </div>
         </div>
     )

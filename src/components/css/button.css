@@ -10,6 +10,24 @@
     display: flex;
     align-items: center;
 }
+.fancy1{
+    margin: 1.5rem;
+    margin-left: 0;
+    padding: 1rem;
+    background-image: linear-gradient(to top left,#00f2ff,#000dff);
+    width: fit-content;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 1rem;
+    color: #ffffff;
+    transition: all ease 0.3s;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+.fancy1:hover{
+    scale: 1.1;
+    box-shadow: 0.5rem 0.5rem 3rem 0.1rem #6ff3ff;
+}
 #yellow{
     color: #fbff00;
     background-color: #f2ff0027;
@@ -43,11 +61,11 @@
     color: rgb(255, 255, 255);
 }
 #green{
-    color: #0e9f10;
-    background-color: #09ff0027;
+    color: #00ff04;
+    background-color: #33ff0043;
 }
 #green:hover{
-    background-color: #129c14;
+    background-color: #00ff04;
     color: rgb(0, 0, 0);
 }
 #purple{

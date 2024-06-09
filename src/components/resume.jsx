@@ -1,21 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './css/resume.css'
 import axios from 'axios'
+import api from '../tools/server'
 import Progress from './progress'
+import packContext from '../context/create'
 export default function Resume() {
     const [resume,setResume] = useState(null)
-
-    useEffect(() => {
-        axios({
-            method: 'GET',
-            url: 'http://127.0.0.1:8000/docs/'
-        }).then((response) => {
+    async function get(){
+        await api.get(
+            '/docs/',
+        )
+        .then((response) => {
             setResume(response.data)
-            console.log(resume)
         })
+    }
+    useEffect(() => {
+        get()
     },[])
+    const con = useContext(packContext)
     if (resume){
-        window.location.href = 'http://127.0.0.1:8000' + resume['attachment']
+        window.location.href = con.link + resume['attachment']
     }
     return (
         <div id='outerpdfc'>

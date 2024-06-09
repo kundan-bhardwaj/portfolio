@@ -1,5 +1,4 @@
 #projc{
-
     margin: 1rem;
     border-radius: 0.5rem;
     background-color: #01101a;
@@ -31,11 +30,41 @@
 }
 #projscroll{
     display: flex;
-    overflow-x: scroll;
+    width: 100%;
+    flex-wrap: wrap;
 }
 #projectd{
     padding: 1rem;
 }
 #pdesc{
     max-width: fit-content;
+}
+#ploading{
+    margin: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    background-color: #01101a;
+}
+#ploimg{
+    padding-bottom: 60%;
+    padding-left: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    background-color: rgba(2, 40, 54, 0.414);
+    width: min-content;
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+    animation: load1 0.5s linear infinite;
+}
+#plostrip{
+    display: inline-flex;
+    padding: 0.8rem;
+    width: 90%;
+    margin: 0.4rem;
+    border-radius: 0.5em;
+    color: #193f78;
+    background-image: linear-gradient(to left,rgb(131, 129, 129), rgba(3, 3, 49, 0.067),rgb(131, 129, 129));
+    animation: load1 0.5s linear infinite;
+    background-color: rgba(2, 40, 54, 0.414);
 }

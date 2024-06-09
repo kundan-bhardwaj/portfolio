@@ -1,26 +1,28 @@
 import axios from 'axios'
 import './css/projects.css'
-import React, { useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import { useEffect } from 'react'
 import Button from './button'
+import api from '../tools/server'
 import { GoLinkExternal } from 'react-icons/go'
+import packContext from '../context/create'
 
 export default function Projects() {
     const [pack, setPack] = useState(null)
     const [tech, setTech] = useState(null)
-
+    const con = useContext(packContext)
     // create projects
-    function getdata() {
-        axios({
-            method: 'GET',
-            url: 'http://127.0.0.1:8000/projects/'
-        }).then((response) => {
+    async function getdata() {
+        await api.get(
+            '/projects/',
+        )
+        .then((response) => {
             setPack(response.data)
         })
-        axios({
-            method: 'GET',
-            url: 'http://127.0.0.1:8000/tech/'
-        }).then((response) => {
+        await api.get(
+            '/tech/',
+        )
+        .then((response) => {
             setTech(response.data)
         })
     }
@@ -35,7 +37,7 @@ export default function Projects() {
             for (var j = 0; j < arr.length; j += 1) {
                 if (tech[i].title === arr[j]) {
                     ele.push(
-                        <img width='25em' src={'http://127.0.0.1:8000' + tech[i].tlogo} alt="" />
+                        <img width='25em' src={con.link + tech[i].tlogo} alt="" />
                     )
                 }
             }
@@ -44,13 +46,13 @@ export default function Projects() {
     }
 
 
-
+    const ref = useRef(null)
     function create() {
         let ele = []
         for (var i = 0; i < pack?.length; i += 1) {
             ele.push(
                 <div id='projc'>
-                    <img id='pimg' src={'http://127.0.0.1:8000' + pack[i].pimg} alt="" />
+                    <img id='pimg' src={con.link + pack[i].pimg} alt="" />
                     <div id='projectd'>
                         <h2 id='ptitle'>{pack[i].title}</h2>
                         <div id='ptech'>
@@ -62,6 +64,9 @@ export default function Projects() {
                 </div>
             )
         }
+        if (ref.current){
+            ref.current.style.display = 'none'
+        }
         return (ele)
     }
 
@@ -70,6 +75,12 @@ export default function Projects() {
         <>
             <div id='projscroll'>
                 {create()}
+                <div id='ploading' ref={ref}>
+                    <div id='ploimg'></div>
+                    <div id='plostrip'></div>
+                    <div id='plostrip'></div>
+                    <div id='plostrip'></div>
+                </div>
             </div>
         </>
     )

@@ -28,6 +28,11 @@ export default function Middle() {
           <img className='bbimg' src={require('./images/homework.png')} alt="" />
           Education
         </div></a>
+      {/* <a href="/blog" style={{ 'textDecoration': 'none' }}>
+        <div className='bigbtn'>
+          <img className='bbimg' src={require('./images/blog.png')} alt="" />
+          My Blog
+        </div></a> */}
     </div>
 
   )

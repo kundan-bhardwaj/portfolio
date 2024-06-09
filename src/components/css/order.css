@@ -1,33 +1,10 @@
 #order{
-    margin-top: 5rem;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-}
-#pack{
-    width: 18rem;
     padding: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: #081f4f48;
-    align-self: flex-end;
-    justify-self: flex-end;
-}
-#dlg2{
-    max-width: 40rem;
-    justify-self: center;
-    border-radius: 1rem;
-    padding: 1rem;
+    display: flex;
+    max-width: 50rem;
     color: aliceblue;
-    background-color: transparent;
-    backdrop-filter: blur(2rem);
-    border: 0.1em solid rgba(193, 193, 193, 0.277);
+    flex-wrap: wrap;
 }
-#cb{
-    width: 1rem;
-    color: aqua;
-    background-color: blueviolet;
-}
-#btn:disabled{
-    background-color: rgb(75, 75, 75);
+#btncc{
+    padding: 1rem;
 }

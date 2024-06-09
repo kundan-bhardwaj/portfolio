@@ -3,7 +3,8 @@ import './css/landing.css'
 import Projects from './projects'
 import Skillcards from './skillcards'
 import Middle from './middle'
-import Social from './social'
+
+import {FncyBtn1} from './button'
 
 
 export default function Landing() {
@@ -15,12 +16,12 @@ export default function Landing() {
                     <div id='intext'>
                         <h1 id='hello'>Hi! There, Myself Kundan Bhardwaj </h1>
                         <h4 id='title'>Unlocking the potential of technology, I design and develop software solutions that drive efficiency and empower businesses.</h4>
+                        <FncyBtn1 to = '/quote' text = 'Get a Quote'/>
                     </div>
                     <div id='image'>
                         <img id='avtar' src={require('./images/avtar.avif')} alt="" />
                     </div>
                 </div>
-                <a href="/quote" style={{ 'textDecoration': 'none' }}><div id='quote'>Get a Quote</div></a>
             </div>
             <div id='profession'>
                 <div id='prtitle'>
@@ -37,7 +38,6 @@ export default function Landing() {
                 <Projects />
             </div>
             <Middle />
-            <Social />
         </div>
     )
 }

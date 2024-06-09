@@ -1,7 +1,4 @@
 #main{
-  display: flex;
-  flex-direction: column;
-  padding-top: 0.3em;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
+    display: block;
+    width: 100%;
 }
