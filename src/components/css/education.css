@@ -2,7 +2,7 @@
     margin: 0.5rem;
     padding: 1rem;
     width: fit-content;
-    background-color: rgb(8, 8, 50);
+    background-color: #01101a;
     border-radius: 1rem;
     max-width: 25rem;
 }
@@ -14,7 +14,7 @@
     align-items: center;
 }
 #contents{
-    background-color: rgba(16, 19, 75, 0.564);
+    background-color: #01101a;
     padding: 0.5rem;
     color: rgb(194, 203, 255);
     width: fit-content;
@@ -23,6 +23,7 @@
 #ilogo{
     width: 6rem;
     height: auto;
+    border-radius: 0.5rem;
 }
 #upper{
     display: flex;

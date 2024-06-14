@@ -1,9 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext,useRef } from 'react'
 import './css/education.css'
-import Progress from './progress'
 import api from '../tools/server'
-import { MdElectricBolt } from 'react-icons/md'
-import axios from 'axios'
 import { useState,useEffect } from 'react'
 import packContext from '../context/create'
 
@@ -22,6 +19,7 @@ export default function Education() {
     useEffect(() => {
         getData()
     }, [])
+    let ref = useRef(null)
     function create() {
         let ele = []
         for (var i = 0; i < edu?.length; i++) {
@@ -45,12 +43,15 @@ export default function Education() {
                 </div>
             )
         }
-        return ele
+        if (ref.current){
+            ref.current.style.display = 'none'
+        }
+        return (ele)
     }
     return (
         <div id='eds'>
         {create()}
-        <div id='loading'>
+        <div id='loading' ref={ref}>
                 <div id='loimg'>
 
                 </div>

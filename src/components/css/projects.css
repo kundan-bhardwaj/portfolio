@@ -1,6 +1,6 @@
 #projc{
     margin: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     background-color: #01101a;
     border: 0.1rem solid rgb(21, 3, 42);
     color: aliceblue;
@@ -10,8 +10,8 @@
 }
 #pimg{
     width: 30rem;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 #plink{
     background-image: linear-gradient(to bottom left,#b305b6,#3d04af);
