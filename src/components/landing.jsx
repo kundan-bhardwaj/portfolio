@@ -11,7 +11,6 @@ export default function Landing() {
     return (
         <div id='landing'>
             <div id='content'>
-            <div className='owl' id='owl3'></div>
                 <div id='topframe'>
                     <div id='intext'>
                         <h1 id='hello'>Hi! There, Myself Kundan Bhardwaj </h1>
@@ -19,7 +18,7 @@ export default function Landing() {
                         <FncyBtn1 to = '/quote' text = 'Get a Quote'/>
                     </div>
                     <div id='image'>
-                        <img id='avtar' src={require('./images/avtar.avif')} alt="" />
+                        <img id='avtar' src={require('./images/avtar.png')} alt="" />
                     </div>
                 </div>
             </div>

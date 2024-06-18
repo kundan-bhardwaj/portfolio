@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 1rem;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 #title{
     display: inline-flex;
@@ -14,7 +14,9 @@
     border-radius: 1.5rem;
     padding: 0.5em;
     font-size: small;
+    border: 0.1rem solid rgb(0, 16, 46);
 }
+
 #skillimg{
     grid-column: 1;
 }

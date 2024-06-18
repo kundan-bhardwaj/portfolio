@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: #000000;
+  background-image: url(./components/images/bg.png);
   
 }
 body > *{
@@ -19,6 +19,14 @@ body > *{
   ); */
   
   background-position: center;
+  height: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(2.5rem);
+}
+#root{
+
+  width: fit-content;
+  height: 100%;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
